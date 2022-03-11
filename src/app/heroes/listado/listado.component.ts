@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 export class ListadoComponent {
 
   heroes: string[] = ['Spiderman', 'Ironman', 'Hulk', 'Thor', 'Capitán América'];
+  heroeBorrado: string = '';
 
+  borrarHeroe() {
+    // Si es undefined devolverá un string vacío
+    this.heroeBorrado = this.heroes.shift() || '';
+  }
 }
