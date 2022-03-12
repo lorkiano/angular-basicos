@@ -5,14 +5,13 @@
 
     <div class="col">
         <!-- datosPersonajes viene del @Input -->
-        <app-personajes [datosPersonajes]="personajes">
-        </app-personajes>
+        <app-personajes [datosPersonajes]="personajes"></app-personajes>
     </div>
 
     <div class="col">
         <app-agregar 
-            [personajes]="personajes"
             [nuevo]="nuevo"
+            (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
         ></app-agregar>
     </div>
 </div>
